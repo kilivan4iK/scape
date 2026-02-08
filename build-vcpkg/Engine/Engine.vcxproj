@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{131B2DE4-A06C-31D5-BA34-A572606A3AB7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>Engine</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Downloads\scape\build-vcpkg\Engine\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Engine.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Engine_d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Downloads\scape\build-vcpkg\Engine\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Engine.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Downloads\scape\build-vcpkg\Engine\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Engine.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Downloads\scape\build-vcpkg\Engine\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Engine.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Bites" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Overlay" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Paging" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Property" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Terrain" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Volume" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;QT_CORE_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Bites" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Overlay" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Paging" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Property" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Terrain" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Volume" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Bites" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Overlay" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Paging" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Property" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Terrain" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Volume" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Bites" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Overlay" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Paging" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Property" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Terrain" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Volume" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Downloads\scape\Engine\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/Downloads/scape/Engine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Downloads/scape -BE:/Downloads/scape/build-vcpkg --check-stamp-file E:/Downloads/scape/build-vcpkg/Engine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Downloads\scape\build-vcpkg\Engine\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/Downloads/scape/Engine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Downloads/scape -BE:/Downloads/scape/build-vcpkg --check-stamp-file E:/Downloads/scape/build-vcpkg/Engine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Downloads\scape\build-vcpkg\Engine\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/Downloads/scape/Engine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Downloads/scape -BE:/Downloads/scape/build-vcpkg --check-stamp-file E:/Downloads/scape/build-vcpkg/Engine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Downloads\scape\build-vcpkg\Engine\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/Downloads/scape/Engine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Downloads/scape -BE:/Downloads/scape/build-vcpkg --check-stamp-file E:/Downloads/scape/build-vcpkg/Engine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Downloads\scape\build-vcpkg\Engine\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\CameraController.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\Console.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\EngineCore.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\EngineInterface.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\HeightfieldManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\QtJSONSettingsDatasetDataAccessObject.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\QtJSONStartupSettingsDataAccessObject.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\RenderView.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\RenderViewManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\SettingsDataset.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\SettingsDatasetDataAccessObject.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\SettingsDatasetManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\SkySettings.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\StartupSettings.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\StartupSettingsDataAccessObject.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\Tickable.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\TickableManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\UIElementClasses.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperation.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuad.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuadBrush.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuadCustom.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationRenderableQuad.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationRenderableQuadManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrush.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushSettings.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushState.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBuffer.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferPage.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferSet.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferSetManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderImage.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderRaw.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderImage.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderRaw.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderUnrealBMPG16.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeom.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomMaterial.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomMaterialSplat.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTile.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileBufferFactory.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileIndexBufferManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileVertexUVBufferManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperation.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationBrush.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationBrushBase.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPU.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUBrush.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUBrush2.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUErosion.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPULevel.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUNoise.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUSmooth.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationFactory.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUBrush.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUNoise.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUNoiseDrag.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUPencil.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationStack.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskDirect.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPage.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPageGPUBrush.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldSerializer\HeightfieldSerializer.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldSerializer\HeightfieldSerializerIncremental.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\Button.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\ButtonDefinition.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\ButtonDefinitionDataAccessObject.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\ButtonId.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\DeviceButtonId.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\InputListener.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\InputManager.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\InputPointer.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\QtJSONButtonDefinitionDataAccesObject.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\TabletInput.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\TabletInputWin32.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\Observer.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\ProceduralLookupTextures.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\QtJSONFileHelper.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\QtJSONHelper.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\ShaderCustomAutoConstants.cpp" />
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\Utils.cpp" />
+    <None Include="E:\Downloads\scape\Engine\Input\ButtonId.def" />
+    <None Include="E:\Downloads\scape\Engine\Input\DeviceButtonIdOISKeyboard.def" />
+    <None Include="E:\Downloads\scape\Engine\Input\DeviceButtonIdOISMouse.def" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\CameraController.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\Console.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\EngineCore.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\EngineInterface.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\HeightfieldManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\QtJSONSettingsDatasetDataAccessObject.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\QtJSONStartupSettingsDataAccessObject.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\RenderView.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\RenderViewManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\SettingsDataset.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\SettingsDatasetDataAccessObject.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\SettingsDatasetManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\SkySettings.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\StartupSettings.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\StartupSettingsDataAccessObject.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\Tickable.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\TickableManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\UIElementClasses.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperation.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuad.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuadBrush.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuadCustom.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationRenderableQuad.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationRenderableQuadManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrush.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushSettings.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushState.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBuffer.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferPage.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferSet.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferSetManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoder.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderImage.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderRaw.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoder.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderImage.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderRaw.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderUnrealBMPG16.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeom.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomMaterial.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomMaterialSplat.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTile.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileBufferFactory.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileIndexBufferManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileVertexUVBufferManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperation.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationBrush.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationBrushBase.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPU.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUBrush.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUBrush2.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUErosion.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPULevel.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUNoise.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUSmooth.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationFactory.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUBrush.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUNoise.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUNoiseDrag.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUPencil.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicyBrushInstancer.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicyBrushInstancerSpacer.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicyScheduler.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicySchedulerTaskDirect.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicySchedulerTaskPageBatch.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationStack.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskDirect.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPage.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPageGPU.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPageGPUBrush.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldSerializer\HeightfieldSerializer.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldSerializer\HeightfieldSerializerIncremental.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\AnalogInputId.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\Button.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\ButtonDefinition.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\ButtonDefinitionDataAccessObject.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\ButtonId.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\DeviceButtonId.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\InputListener.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\InputManager.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\InputPointer.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\QtJSONButtonDefinitionDataAccesObject.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\TabletInput.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\TabletInputWin32.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\BMPHeader.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\ConverterFunctor.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\Observer.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\ProceduralLookupTextures.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\QtJSONFileHelper.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\QtJSONHelper.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\RLECodec.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\SerialMemoryBuffer.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\ShaderCustomAutoConstants.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\TMatrix4.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\TVector2.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\TVector3.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\TVector4.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\Utils.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Wintab\pktdef.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Wintab\wintab.h" />
+    <ClInclude Include="E:\Downloads\scape\Engine\Wintab\wintabx.h" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="E:\Downloads\scape\build-vcpkg\ZERO_CHECK.vcxproj">
+      <Project>{E52D1F56-F2CD-3806-8ED1-A425C2762B68}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

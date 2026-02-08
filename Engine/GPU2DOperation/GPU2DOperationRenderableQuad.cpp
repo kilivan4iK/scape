@@ -213,6 +213,11 @@ void GPU2DOperationRenderableQuad::setMaterialTexture(const string& aliasName,
 
 static void applyTextureAliases(const Ogre::Technique* t, const Ogre::NameValuePairList& aliasList)
 {
+    if (!t)
+    {
+        return;
+    }
+
     for (auto p : t->getPasses())
     {
         for (auto tus : p->getTextureUnitStates())
@@ -245,7 +250,14 @@ void GPU2DOperationRenderableQuad::prepareForRender(Ogre::ushort zOrder)
     }
 
     Ogre::Technique* technique = mMaterial->getBestTechnique();
-    assert(technique);
+    if (!technique)
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "GPU2DOperationRenderableQuad::prepareForRender: no supported technique for material '" +
+            mMaterial->getName() + "'.");
+        mNewAliasTextureMap.clear();
+        return;
+    }
 
     // Update material texture(s) if necessary
     if (newMaterial)
@@ -262,15 +274,22 @@ void GPU2DOperationRenderableQuad::prepareForRender(Ogre::ushort zOrder)
     for (Ogre::ushort i = 0; i < technique->getNumPasses(); ++i)
     {
         Ogre::Pass* pass = technique->getPass(i);
+        if (!pass)
+        {
+            continue;
+        }
         const Ogre::Pass::TextureUnitStates& tus = pass->getTextureUnitStates();
-        for(Ogre::Pass::TextureUnitStates::const_iterator it = tus.begin(); it != tus.end(); it++)
+        for (Ogre::Pass::TextureUnitStates::const_iterator it = tus.begin(); it != tus.end(); it++)
         {
             Ogre::TextureUnitState* unitState = *it;
             const string& textureName = unitState->getTextureName();
             if (textureName.length())
             {
                 Ogre::TexturePtr texture = Ogre::TextureManager::getSingleton().getByName(textureName);
-                assert(!texture->getBuffer()->isLocked());
+                if (texture && texture->getBuffer())
+                {
+                    assert(!texture->getBuffer()->isLocked());
+                }
             }
         }
     }

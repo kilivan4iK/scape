@@ -165,10 +165,32 @@ void EngineCore::loadResourceLocations()
 void EngineCore::setupRenderSystem()
 {
     const Ogre::RenderSystemList& renderSystemList = mRoot->getAvailableRenderers();
-    Ogre::RenderSystemList::const_iterator renderSystemIt = renderSystemList.begin();
-    if (renderSystemIt != renderSystemList.end())
+    Ogre::RenderSystem* selectedRenderSystem = NULL;
+
+    // Prefer legacy OpenGL for this codebase; many materials rely on fixed-function fallbacks.
+    Ogre::RenderSystemList::const_iterator renderSystemIt, renderSystemItEnd = renderSystemList.end();
+    for (renderSystemIt = renderSystemList.begin(); renderSystemIt != renderSystemItEnd; ++renderSystemIt)
     {
-        mRoot->setRenderSystem(*renderSystemIt);
+        Ogre::RenderSystem* candidate = *renderSystemIt;
+        if (candidate && candidate->getName().find("OpenGL Rendering Subsystem") != string::npos)
+        {
+            selectedRenderSystem = candidate;
+            break;
+        }
+    }
+
+    if (!selectedRenderSystem)
+    {
+        renderSystemIt = renderSystemList.begin();
+        if (renderSystemIt != renderSystemList.end())
+        {
+            selectedRenderSystem = *renderSystemIt;
+        }
+    }
+
+    if (selectedRenderSystem)
+    {
+        mRoot->setRenderSystem(selectedRenderSystem);
     }
 }
 
@@ -372,7 +394,25 @@ void EngineCore::update()
             }
             Ogre::Light* l = mSceneManager->getLight(_T("MainLight"));
             l->setType(Ogre::Light::LT_DIRECTIONAL);
+#ifdef OGRE_NODELESS_POSITIONING
             l->setDirection(dir);
+#else
+            Ogre::SceneNode* lightNode = l->getParentSceneNode();
+            if (!lightNode)
+            {
+                if (mSceneManager->hasSceneNode(_T("MainLightNode")))
+                {
+                    lightNode = mSceneManager->getSceneNode(_T("MainLightNode"));
+                }
+                else
+                {
+                    lightNode = mSceneManager->getRootSceneNode()->createChildSceneNode(
+                        _T("MainLightNode"));
+                }
+                lightNode->attachObject(l);
+            }
+            lightNode->setDirection(dir, Ogre::Node::TS_WORLD);
+#endif
 
             /* this one when using normal map as the up direction is in z coordinate.
             const Real z = cosTheta;
@@ -448,12 +488,38 @@ void EngineCore::loadSkyBox()
     string newTextureName = getSkySettings()->getSkyBoxTextureName();
 
     Ogre::MaterialPtr matPtr = Ogre::MaterialManager::getSingleton().getByName("SkyBox");
+    if (!matPtr)
+    {
+        Ogre::LogManager::getSingleton().logMessage("EngineCore::loadSkyBox: SkyBox material not found.");
+        mSceneManager->setSkyBox(false, "");
+        return;
+    }
+
     matPtr->load();
 
     const Ogre::Material::Techniques& techniques = matPtr->getSupportedTechniques();
+    if (techniques.empty())
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "EngineCore::loadSkyBox: no supported technique for SkyBox material.");
+        mSceneManager->setSkyBox(false, "");
+        return;
+    }
+
     for (Ogre::Material::Techniques::const_iterator it = techniques.begin(); it != techniques.end(); it++)
     {
-        Ogre::TextureUnitState* tus = (*it)->getPass(0)->getTextureUnitState(0);
+        if ((*it)->getNumPasses() == 0)
+        {
+            continue;
+        }
+
+        Ogre::Pass* pass = (*it)->getPass(0);
+        if (!pass || pass->getNumTextureUnitStates() == 0)
+        {
+            continue;
+        }
+
+        Ogre::TextureUnitState* tus = pass->getTextureUnitState(0);
 
         string oldTextureName = tus->getTextureName();
         Ogre::TextureType oldTextureType = tus->getTextureType();

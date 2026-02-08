@@ -418,6 +418,6 @@ void HeightfieldOperationCPUErosion::applyPrimary(const Ogre::Vector3& position,
 
     heightfieldBuffer->updateFrom(pixelBox);
     heightfieldBuffer->revalidate();
-    delete dataIn;
-    delete dataOut;
+    delete[] dataIn;
+    delete[] dataOut;
 }

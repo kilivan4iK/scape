@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E59635B2-6B82-392C-BCD5-083450C47513}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>qtEditor</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Downloads\scape\build-vcpkg\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">qtEditor.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">qtEditor_d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Downloads\scape\build-vcpkg\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qtEditor.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qtEditor</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Downloads\scape\build-vcpkg\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">qtEditor.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">qtEditor</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Downloads\scape\build-vcpkg\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">qtEditor.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">qtEditor</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_Debug;E:\Downloads\scape\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Bites" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Overlay" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Paging" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Property" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Terrain" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Volume" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtGui" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;QT_GUI_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;QT_GUI_LIB;QT_CORE_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_Debug;E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_Debug;E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target qtEditor</Message>
+      <Command>setlocal
+cd E:\Downloads\scape\build-vcpkg\qtEditor
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutogenInfo.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/Downloads/scape/build-vcpkg/bin/qtEditor_d.exe -installedDir C:/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\vcpkg\installed\x64-windows\debug\lib\Qt5Widgetsd.lib;..\Engine\Debug\Engine_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\Qt5Guid.lib;C:\vcpkg\installed\x64-windows\debug\lib\OgreBites_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\OgreMeshLodGenerator_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\OgreOverlay_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\OgreProperty_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\OgreTerrain_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\OgrePaging_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\OgreRTShaderSystem_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\OgreVolume_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\manual-link\OgreMain_d.lib;C:\vcpkg\installed\x64-windows\debug\lib\Qt5Cored.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>E:/Downloads/scape/build-vcpkg/qtEditor/Debug/qtEditor_d.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>E:/Downloads/scape/build-vcpkg/bin/qtEditor_d.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_Release;E:\Downloads\scape\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Bites" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Overlay" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Paging" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Property" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Terrain" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Volume" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtGui" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_Release;E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_Release;E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target qtEditor</Message>
+      <Command>setlocal
+cd E:\Downloads\scape\build-vcpkg\qtEditor
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutogenInfo.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/Downloads/scape/build-vcpkg/bin/qtEditor.exe -installedDir C:/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\vcpkg\installed\x64-windows\lib\Qt5Widgets.lib;..\Engine\Release\Engine.lib;C:\vcpkg\installed\x64-windows\lib\Qt5Gui.lib;C:\vcpkg\installed\x64-windows\lib\OgreBites.lib;C:\vcpkg\installed\x64-windows\lib\OgreMeshLodGenerator.lib;C:\vcpkg\installed\x64-windows\lib\OgreOverlay.lib;C:\vcpkg\installed\x64-windows\lib\OgreProperty.lib;C:\vcpkg\installed\x64-windows\lib\OgreTerrain.lib;C:\vcpkg\installed\x64-windows\lib\OgrePaging.lib;C:\vcpkg\installed\x64-windows\lib\OgreRTShaderSystem.lib;C:\vcpkg\installed\x64-windows\lib\OgreVolume.lib;C:\vcpkg\installed\x64-windows\lib\manual-link\OgreMain.lib;C:\vcpkg\installed\x64-windows\lib\Qt5Core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>E:/Downloads/scape/build-vcpkg/qtEditor/Release/qtEditor.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>E:/Downloads/scape/build-vcpkg/bin/qtEditor.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_MinSizeRel;E:\Downloads\scape\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Bites" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Overlay" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Paging" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Property" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Terrain" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Volume" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtGui" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_MinSizeRel;E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_MinSizeRel;E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target qtEditor</Message>
+      <Command>setlocal
+cd E:\Downloads\scape\build-vcpkg\qtEditor
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutogenInfo.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/Downloads/scape/build-vcpkg/bin/qtEditor.exe -installedDir C:/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\vcpkg\installed\x64-windows\lib\Qt5Widgets.lib;..\Engine\MinSizeRel\Engine.lib;C:\vcpkg\installed\x64-windows\lib\Qt5Gui.lib;C:\vcpkg\installed\x64-windows\lib\OgreBites.lib;C:\vcpkg\installed\x64-windows\lib\OgreMeshLodGenerator.lib;C:\vcpkg\installed\x64-windows\lib\OgreOverlay.lib;C:\vcpkg\installed\x64-windows\lib\OgreProperty.lib;C:\vcpkg\installed\x64-windows\lib\OgreTerrain.lib;C:\vcpkg\installed\x64-windows\lib\OgrePaging.lib;C:\vcpkg\installed\x64-windows\lib\OgreRTShaderSystem.lib;C:\vcpkg\installed\x64-windows\lib\OgreVolume.lib;C:\vcpkg\installed\x64-windows\lib\manual-link\OgreMain.lib;C:\vcpkg\installed\x64-windows\lib\Qt5Core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>E:/Downloads/scape/build-vcpkg/qtEditor/MinSizeRel/qtEditor.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>E:/Downloads/scape/build-vcpkg/bin/qtEditor.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_RelWithDebInfo;E:\Downloads\scape\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Bites" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Overlay" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Paging" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Property" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Terrain" /external:I "C:/vcpkg/installed/x64-windows/include/OGRE/Volume" /external:I "C:/vcpkg/installed/x64-windows/include/qt5" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtGui" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtCore" /external:I "C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc" /external:I "C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_RelWithDebInfo;E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Downloads\scape\build-vcpkg\qtEditor;E:\Downloads\scape\qtEditor;E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\include_RelWithDebInfo;E:\Downloads\scape\Engine;C:\vcpkg\installed\x64-windows\include\OGRE\Bites;C:\vcpkg\installed\x64-windows\include\OGRE;C:\vcpkg\installed\x64-windows\include\OGRE\Overlay;C:\vcpkg\installed\x64-windows\include\OGRE\RTShaderSystem;C:\vcpkg\installed\x64-windows\include\OGRE\MeshLodGenerator;C:\vcpkg\installed\x64-windows\include\OGRE\Paging;C:\vcpkg\installed\x64-windows\include\OGRE\Property;C:\vcpkg\installed\x64-windows\include\OGRE\Terrain;C:\vcpkg\installed\x64-windows\include\OGRE\Volume;C:\vcpkg\installed\x64-windows\include\qt5;C:\vcpkg\installed\x64-windows\include\qt5\QtGui;C:\vcpkg\installed\x64-windows\include\qt5\QtCore;C:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;C:\vcpkg\installed\x64-windows\include\qt5\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target qtEditor</Message>
+      <Command>setlocal
+cd E:\Downloads\scape\build-vcpkg\qtEditor
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutogenInfo.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/Downloads/scape/build-vcpkg/bin/qtEditor.exe -installedDir C:/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\vcpkg\installed\x64-windows\lib\Qt5Widgets.lib;..\Engine\RelWithDebInfo\Engine.lib;C:\vcpkg\installed\x64-windows\lib\Qt5Gui.lib;C:\vcpkg\installed\x64-windows\lib\OgreBites.lib;C:\vcpkg\installed\x64-windows\lib\OgreMeshLodGenerator.lib;C:\vcpkg\installed\x64-windows\lib\OgreOverlay.lib;C:\vcpkg\installed\x64-windows\lib\OgreProperty.lib;C:\vcpkg\installed\x64-windows\lib\OgreTerrain.lib;C:\vcpkg\installed\x64-windows\lib\OgrePaging.lib;C:\vcpkg\installed\x64-windows\lib\OgreRTShaderSystem.lib;C:\vcpkg\installed\x64-windows\lib\OgreVolume.lib;C:\vcpkg\installed\x64-windows\lib\manual-link\OgreMain.lib;C:\vcpkg\installed\x64-windows\lib\Qt5Core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>E:/Downloads/scape/build-vcpkg/qtEditor/RelWithDebInfo/qtEditor.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>E:/Downloads/scape/build-vcpkg/bin/qtEditor.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Downloads\scape\build-vcpkg\CMakeFiles\f16f49b9c86b6b11a150420baaf4dfe0\qrc_editor.cpp.rule">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Automatic RCC for res/editor.qrc</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd E:\Downloads\scape\build-vcpkg\qtEditor
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutoRcc_editor_PNK5WDWK6L_Info.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Downloads\scape\qtEditor\res\editor.qrc;E:\Downloads\scape\build-vcpkg\qtEditor\CMakeFiles\qtEditor_autogen.dir\AutoRcc_editor_PNK5WDWK6L_Info.json;E:\Downloads\scape\qtEditor\res\scape_splash.jpg;E:\Downloads\scape\qtEditor\res\ScapeLogo.jpg;E:\Downloads\scape\qtEditor\res\scape_erosion_mountains_32.jpg;E:\Downloads\scape\qtEditor\res\icon_import16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_erosion24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_noise24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_level24.bmp;E:\Downloads\scape\qtEditor\res\icon_plus16.bmp;E:\Downloads\scape\qtEditor\res\icon_export16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_material24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_smooth24.bmp;E:\Downloads\scape\qtEditor\res\icon_save16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_light24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_pencil24.bmp;E:\Downloads\scape\qtEditor\res\icon_trashcan16.bmp;E:\Downloads\scape\qtEditor\res\icon_edit16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_ledge24.bmp;C:\vcpkg\installed\x64-windows\tools\qt5\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\PNK5WDWK6L\qrc_editor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Automatic RCC for res/editor.qrc</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd E:\Downloads\scape\build-vcpkg\qtEditor
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutoRcc_editor_PNK5WDWK6L_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Downloads\scape\qtEditor\res\editor.qrc;E:\Downloads\scape\build-vcpkg\qtEditor\CMakeFiles\qtEditor_autogen.dir\AutoRcc_editor_PNK5WDWK6L_Info.json;E:\Downloads\scape\qtEditor\res\scape_splash.jpg;E:\Downloads\scape\qtEditor\res\ScapeLogo.jpg;E:\Downloads\scape\qtEditor\res\scape_erosion_mountains_32.jpg;E:\Downloads\scape\qtEditor\res\icon_import16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_erosion24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_noise24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_level24.bmp;E:\Downloads\scape\qtEditor\res\icon_plus16.bmp;E:\Downloads\scape\qtEditor\res\icon_export16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_material24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_smooth24.bmp;E:\Downloads\scape\qtEditor\res\icon_save16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_light24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_pencil24.bmp;E:\Downloads\scape\qtEditor\res\icon_trashcan16.bmp;E:\Downloads\scape\qtEditor\res\icon_edit16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_ledge24.bmp;C:\vcpkg\installed\x64-windows\tools\qt5\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\PNK5WDWK6L\qrc_editor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Automatic RCC for res/editor.qrc</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd E:\Downloads\scape\build-vcpkg\qtEditor
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutoRcc_editor_PNK5WDWK6L_Info.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Downloads\scape\qtEditor\res\editor.qrc;E:\Downloads\scape\build-vcpkg\qtEditor\CMakeFiles\qtEditor_autogen.dir\AutoRcc_editor_PNK5WDWK6L_Info.json;E:\Downloads\scape\qtEditor\res\scape_splash.jpg;E:\Downloads\scape\qtEditor\res\ScapeLogo.jpg;E:\Downloads\scape\qtEditor\res\scape_erosion_mountains_32.jpg;E:\Downloads\scape\qtEditor\res\icon_import16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_erosion24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_noise24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_level24.bmp;E:\Downloads\scape\qtEditor\res\icon_plus16.bmp;E:\Downloads\scape\qtEditor\res\icon_export16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_material24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_smooth24.bmp;E:\Downloads\scape\qtEditor\res\icon_save16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_light24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_pencil24.bmp;E:\Downloads\scape\qtEditor\res\icon_trashcan16.bmp;E:\Downloads\scape\qtEditor\res\icon_edit16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_ledge24.bmp;C:\vcpkg\installed\x64-windows\tools\qt5\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\PNK5WDWK6L\qrc_editor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Automatic RCC for res/editor.qrc</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd E:\Downloads\scape\build-vcpkg\qtEditor
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutoRcc_editor_PNK5WDWK6L_Info.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Downloads\scape\qtEditor\res\editor.qrc;E:\Downloads\scape\build-vcpkg\qtEditor\CMakeFiles\qtEditor_autogen.dir\AutoRcc_editor_PNK5WDWK6L_Info.json;E:\Downloads\scape\qtEditor\res\scape_splash.jpg;E:\Downloads\scape\qtEditor\res\ScapeLogo.jpg;E:\Downloads\scape\qtEditor\res\scape_erosion_mountains_32.jpg;E:\Downloads\scape\qtEditor\res\icon_import16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_erosion24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_noise24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_level24.bmp;E:\Downloads\scape\qtEditor\res\icon_plus16.bmp;E:\Downloads\scape\qtEditor\res\icon_export16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_material24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_smooth24.bmp;E:\Downloads\scape\qtEditor\res\icon_save16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_light24.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_pencil24.bmp;E:\Downloads\scape\qtEditor\res\icon_trashcan16.bmp;E:\Downloads\scape\qtEditor\res\icon_edit16.bmp;E:\Downloads\scape\qtEditor\res\icon_tool_ledge24.bmp;C:\vcpkg\installed\x64-windows\tools\qt5\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\PNK5WDWK6L\qrc_editor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Downloads\scape\qtEditor\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/Downloads/scape/qtEditor/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Downloads/scape -BE:/Downloads/scape/build-vcpkg --check-stamp-file E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Downloads\scape\qtEditor\ScapeVersion.h.in;E:\Downloads\scape\qtEditor\res\editor.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Downloads\scape\build-vcpkg\qtEditor\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/Downloads/scape/qtEditor/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Downloads/scape -BE:/Downloads/scape/build-vcpkg --check-stamp-file E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Downloads\scape\qtEditor\ScapeVersion.h.in;E:\Downloads\scape\qtEditor\res\editor.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Downloads\scape\build-vcpkg\qtEditor\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/Downloads/scape/qtEditor/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Downloads/scape -BE:/Downloads/scape/build-vcpkg --check-stamp-file E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Downloads\scape\qtEditor\ScapeVersion.h.in;E:\Downloads\scape\qtEditor\res\editor.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Downloads\scape\build-vcpkg\qtEditor\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/Downloads/scape/qtEditor/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Downloads/scape -BE:/Downloads/scape/build-vcpkg --check-stamp-file E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Downloads\scape\qtEditor\ScapeVersion.h.in;E:\Downloads\scape\qtEditor\res\editor.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Downloads\scape\build-vcpkg\qtEditor\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\mocs_compilation_Debug.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="E:\Downloads\scape\qtEditor\MainWindow.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\OgreWidget.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\StartupSettingsDialog.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\AboutDialog.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\PropertiesWidget.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\PresetsWidget.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\ImageFileDialog.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\ImportImageDialog.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\ExportImageDialog.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\BrushSettingsWidget.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\ButtonDefinitionDetailsDialog.h" />
+    <ClInclude Include="E:\Downloads\scape\qtEditor\ButtonDefinitionsDialog.h" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\main.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\MainWindow.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\OgreWidget.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\StartupSettingsDialog.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\AboutDialog.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\PropertiesWidget.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\PresetsWidget.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\ImageFileDialog.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\ImportImageDialog.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\ExportImageDialog.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\BrushSettingsWidget.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\ButtonDefinitionDetailsDialog.cpp" />
+    <ClCompile Include="E:\Downloads\scape\qtEditor\ButtonDefinitionsDialog.cpp" />
+    <None Include="E:\Downloads\scape\qtEditor\res\editor.qrc">
+    </None>
+    <ResourceCompile Include="E:\Downloads\scape\qtEditor\res\Editor.rc" />
+    <ClCompile Include="E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\PNK5WDWK6L\qrc_editor.cpp" />
+    <ClCompile Include="E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\mocs_compilation_Release.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\mocs_compilation_MinSizeRel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\build-vcpkg\qtEditor\qtEditor_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="E:\Downloads\scape\build-vcpkg\ZERO_CHECK.vcxproj">
+      <Project>{E52D1F56-F2CD-3806-8ED1-A425C2762B68}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\Downloads\scape\build-vcpkg\Engine\Engine.vcxproj">
+      <Project>{131B2DE4-A06C-31D5-BA34-A572606A3AB7}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

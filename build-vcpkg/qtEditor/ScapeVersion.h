@@ -1,0 +1,8 @@
+#ifndef __SCAPEVERSION_H__
+#define __SCAPEVERSION_H__
+
+#define SCAPE_VERSION_MAJOR 19
+#define SCAPE_VERSION_MINOR 09
+#define SCAPE_VERSION_NAME "19.09"
+
+#endif // __SCAPEVERSION_H__

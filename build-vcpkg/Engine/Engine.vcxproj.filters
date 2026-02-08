@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\CameraController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\Console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\EngineCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\EngineInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\HeightfieldManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\QtJSONSettingsDatasetDataAccessObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\QtJSONStartupSettingsDataAccessObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\RenderView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\RenderViewManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\SettingsDataset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\SettingsDatasetDataAccessObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\SettingsDatasetManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\SkySettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\StartupSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\StartupSettingsDataAccessObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\Tickable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\TickableManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\EngineCore\UIElementClasses.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuadBrush.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuadCustom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationRenderableQuad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationRenderableQuadManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrush.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferSetManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderRaw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderRaw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderUnrealBMPG16.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomMaterialSplat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileBufferFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileIndexBufferManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileVertexUVBufferManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationBrush.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationBrushBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUBrush.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUBrush2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUErosion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPULevel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUNoise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUSmooth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUBrush.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUNoise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUNoiseDrag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUPencil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskDirect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPageGPUBrush.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldSerializer\HeightfieldSerializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\HeightfieldSerializer\HeightfieldSerializerIncremental.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\ButtonDefinition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\ButtonDefinitionDataAccessObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\ButtonId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\DeviceButtonId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\InputListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\InputManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\InputPointer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\QtJSONButtonDefinitionDataAccesObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\TabletInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Input\TabletInputWin32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\Observer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\ProceduralLookupTextures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\QtJSONFileHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\QtJSONHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\ShaderCustomAutoConstants.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downloads\scape\Engine\Utils\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\CameraController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\Console.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\EngineCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\EngineInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\HeightfieldManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\QtJSONSettingsDatasetDataAccessObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\QtJSONStartupSettingsDataAccessObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\RenderView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\RenderViewManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\SettingsDataset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\SettingsDatasetDataAccessObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\SettingsDatasetManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\SkySettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\StartupSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\StartupSettingsDataAccessObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\Tickable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\TickableManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\EngineCore\UIElementClasses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuadBrush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationQuadCustom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationRenderableQuad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\GPU2DOperation\GPU2DOperationRenderableQuadManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBrush\HeightfieldBrushState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldBuffer\HeightfieldBufferSetManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileDecoderRaw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderRaw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldFileCodecs\HeightfieldFileEncoderUnrealBMPG16.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomMaterialSplat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileBufferFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileIndexBufferManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldGeom\HeightfieldGeomTileVertexUVBufferManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationBrush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationBrushBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPU.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUBrush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUBrush2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUErosion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPULevel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUNoise.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationCPUSmooth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUBrush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUNoise.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUNoiseDrag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationGPUPencil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicyBrushInstancer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicyBrushInstancerSpacer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicyScheduler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicySchedulerTaskDirect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationPolicySchedulerTaskPageBatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskDirect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPageGPU.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldOperation\HeightfieldOperationTaskPageGPUBrush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldSerializer\HeightfieldSerializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\HeightfieldSerializer\HeightfieldSerializerIncremental.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\AnalogInputId.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\ButtonDefinition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\ButtonDefinitionDataAccessObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\ButtonId.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\DeviceButtonId.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\InputListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\InputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\InputPointer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\QtJSONButtonDefinitionDataAccesObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\TabletInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Input\TabletInputWin32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\BMPHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\ConverterFunctor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\Observer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\ProceduralLookupTextures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\QtJSONFileHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\QtJSONHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\RLECodec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\SerialMemoryBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\ShaderCustomAutoConstants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\TMatrix4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\TVector2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\TVector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\TVector4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Utils\Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Wintab\pktdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Wintab\wintab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downloads\scape\Engine\Wintab\wintabx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Downloads\scape\Engine\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\Downloads\scape\Engine\Input\ButtonId.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\Downloads\scape\Engine\Input\DeviceButtonIdOISKeyboard.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\Downloads\scape\Engine\Input\DeviceButtonIdOISMouse.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{51EBCE99-9D1F-31EC-AD95-11B8DEE8A67D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7F94EE10-1FC9-3D81-B671-72BCC98251BF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -168,8 +168,8 @@ void HeightfieldOperationCPUSmooth::applyPrimary(const Ogre::Vector3& position, 
     pixelBox.data = reinterpret_cast<Ogre::uchar*>(dataOut);
     heightfieldBuffer->updateFrom(pixelBox);
     heightfieldBuffer->revalidate();
-    delete dataIn;
-    delete dataOut;
+    delete[] dataIn;
+    delete[] dataOut;
 }
 
 void HeightfieldOperationCPUSmooth::applySecondary(const Ogre::Vector3& position, Ogre::Real strength)
@@ -250,6 +250,6 @@ void HeightfieldOperationCPUSmooth::applySecondary(const Ogre::Vector3& position
     pixelBox.data = reinterpret_cast<Ogre::uchar*>(dataOut);
     heightfieldBuffer->updateFrom(pixelBox);
     heightfieldBuffer->revalidate();
-    delete dataIn;
-    delete dataOut;
+    delete[] dataIn;
+    delete[] dataOut;
 }

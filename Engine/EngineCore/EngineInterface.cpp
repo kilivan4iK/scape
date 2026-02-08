@@ -499,6 +499,16 @@ UIElementContainer* EngineInterface::getUIElementContainer(EScapeUIElementGroupI
 
 void EngineInterface::resetHeightfield() { getEngineCore()->getHeightfieldManager()->resetHeightfield(); }
 
+bool EngineInterface::undoLastOperation()
+{
+    return getEngineCore()->getHeightfieldOperationStack()->undoLastOperation();
+}
+
+bool EngineInterface::redoLastOperation()
+{
+    return getEngineCore()->getHeightfieldOperationStack()->redoLastOperation();
+}
+
 HeightfieldBrushSettings& EngineInterface::getHeightfieldBrushSettings()
 {
     return getEngineCore()->getHeightfieldBrushManager()->getHeightfieldBrushSettings();

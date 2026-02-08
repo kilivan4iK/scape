@@ -17,6 +17,7 @@
 #include <QFileDialog>
 #include <QInputDialog>
 #include <OgreStringConverter.h>
+#include <OgreException.h>
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), mAttachedInputToEngine(false), mOgreWidget(0),
@@ -37,6 +38,10 @@ MainWindow::MainWindow(QWidget* parent)
 
     mOgreWidget = new OgreWidget(mEngineInterface, this);
     setCentralWidget(mOgreWidget);
+
+    // Default to CPU brush operation; legacy GPU brush materials rely on unavailable Cg shaders.
+    selectTool("HeightfieldOperationCPUBrush", ScapeEngine::SCAPEUIELEMENTGROUPID_OPERATION);
+    actPencilEraser->setChecked(true);
 
     mTimer = new QTimer(this);
     mTimer->setInterval(0);
@@ -68,7 +73,49 @@ void MainWindow::resizeEvent(QResizeEvent* rEvent)
     }
 }
 
-void MainWindow::timerLoop() { mEngineInterface->update(); }
+void MainWindow::timerLoop()
+{
+    try
+    {
+        mEngineInterface->update();
+    }
+    catch (const Ogre::Exception& e)
+    {
+        if (Ogre::LogManager::getSingletonPtr())
+        {
+            Ogre::LogManager::getSingleton().logMessage(
+                "MainWindow::timerLoop caught Ogre::Exception: " + e.getFullDescription());
+        }
+        if (mTimer)
+        {
+            mTimer->stop();
+        }
+    }
+    catch (const std::exception& e)
+    {
+        if (Ogre::LogManager::getSingletonPtr())
+        {
+            Ogre::LogManager::getSingleton().logMessage(
+                string("MainWindow::timerLoop caught std::exception: ") + e.what());
+        }
+        if (mTimer)
+        {
+            mTimer->stop();
+        }
+    }
+    catch (...)
+    {
+        if (Ogre::LogManager::getSingletonPtr())
+        {
+            Ogre::LogManager::getSingleton().logMessage(
+                "MainWindow::timerLoop caught unknown exception.");
+        }
+        if (mTimer)
+        {
+            mTimer->stop();
+        }
+    }
+}
 
 void MainWindow::createActions()
 {
@@ -90,6 +137,16 @@ void MainWindow::createActions()
 
     actResetHeightfield = new QAction(tr("Reset heightfield"), this);
     actResetHeightfield->setStatusTip(tr("Reset heightfield"));
+
+    actUndo = new QAction(tr("Undo"), this);
+    actUndo->setStatusTip(tr("Undo last brush stroke"));
+    actUndo->setShortcut(QKeySequence::Undo);
+    actUndo->setShortcutContext(Qt::WindowShortcut);
+
+    actRedo = new QAction(tr("Redo"), this);
+    actRedo->setStatusTip(tr("Redo last undone brush stroke"));
+    actRedo->setShortcut(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_Z));
+    actRedo->setShortcutContext(Qt::WindowShortcut);
 
     actStartupSettings = new QAction(tr("Startup settings"), this);
     actStartupSettings->setStatusTip(tr("Startup settings"));
@@ -195,6 +252,8 @@ void MainWindow::createActions()
 void MainWindow::connectActions()
 {
     connect(actExit, SIGNAL(triggered()), this, SLOT(exitApp()));
+    connect(actUndo, SIGNAL(triggered()), this, SLOT(undoOperation()));
+    connect(actRedo, SIGNAL(triggered()), this, SLOT(redoOperation()));
     connect(actResetHeightfield, SIGNAL(triggered()), this, SLOT(resetHeightfield()));
     connect(actStartupSettings, SIGNAL(triggered()), this, SLOT(startupSettings()));
     connect(actButtonDefinitions, SIGNAL(triggered()), this, SLOT(buttonDefinitions()));
@@ -300,6 +359,9 @@ void MainWindow::populateMainMenu()
     menuEdit = new QMenu(tr("Edit"), ui->mMenuBar);
     menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
     ui->mMenuBar->addAction(menuEdit->menuAction());
+    menuEdit->addAction(actUndo);
+    menuEdit->addAction(actRedo);
+    menuEdit->addSeparator();
     menuEdit->addAction(actResetHeightfield);
 
     menuSettings = new QMenu(tr("Settings"), ui->mMenuBar);
@@ -530,22 +592,22 @@ void MainWindow::exportImage()
 
 void MainWindow::pencilEraserGPU()
 {
-    selectTool("HeightfieldOperationGPUPencil", ScapeEngine::SCAPEUIELEMENTGROUPID_OPERATION);
+    selectTool("HeightfieldOperationCPUBrush", ScapeEngine::SCAPEUIELEMENTGROUPID_OPERATION);
 }
 
 void MainWindow::directionalNoiseGPU()
 {
-    selectTool("HeightfieldOperationGPUNoiseDrag", ScapeEngine::SCAPEUIELEMENTGROUPID_OPERATION);
+    selectTool("HeightfieldOperationCPUNoise", ScapeEngine::SCAPEUIELEMENTGROUPID_OPERATION);
 }
 
 void MainWindow::noiseGPU()
 {
-    selectTool("HeightfieldOperationGPUNoise", ScapeEngine::SCAPEUIELEMENTGROUPID_OPERATION);
+    selectTool("HeightfieldOperationCPUNoise", ScapeEngine::SCAPEUIELEMENTGROUPID_OPERATION);
 }
 
 void MainWindow::softenGPU()
 {
-    selectTool("HeightfieldOperationGPUBrush", ScapeEngine::SCAPEUIELEMENTGROUPID_OPERATION);
+    selectTool("HeightfieldOperationCPUSmooth", ScapeEngine::SCAPEUIELEMENTGROUPID_OPERATION);
 }
 
 void MainWindow::sharpenSoften()
@@ -686,6 +748,10 @@ void MainWindow::buttonDefinitions()
 }
 
 void MainWindow::resetHeightfield() { mEngineInterface->resetHeightfield(); }
+
+void MainWindow::undoOperation() { mEngineInterface->undoLastOperation(); }
+
+void MainWindow::redoOperation() { mEngineInterface->redoLastOperation(); }
 
 void MainWindow::exitApp() { close(); }
 

@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/Downloads/scape/build-vcpkg/cmake_install.cmake",
+		"E:/Downloads/scape/build-vcpkg/Engine/cmake_install.cmake",
+		"E:/Downloads/scape/build-vcpkg/Dependencies/cmake_install.cmake",
+		"E:/Downloads/scape/build-vcpkg/qtEditor/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

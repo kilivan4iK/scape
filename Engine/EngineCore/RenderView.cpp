@@ -233,29 +233,43 @@ void RenderView::update()
 
     if (mRenderDebugInfo)
     {
-        // update stats when necessary
-        try
+        if (mOverlay)
         {
-            Ogre::OverlayElement* guiAvg =
-                Ogre::OverlayManager::getSingleton().getOverlayElement("DebugOverlay/AverageFps");
-            Ogre::OverlayElement* guiTris =
-                Ogre::OverlayManager::getSingleton().getOverlayElement("DebugOverlay/NumTris");
-            Ogre::OverlayElement* guiBatches =
-                Ogre::OverlayManager::getSingleton().getOverlayElement("DebugOverlay/NumBatches");
-            Ogre::OverlayElement* guiDbg =
-                Ogre::OverlayManager::getSingleton().getOverlayElement("DebugOverlay/DebugText");
+            // update stats when necessary
+            try
+            {
+                Ogre::OverlayElement* guiAvg =
+                    Ogre::OverlayManager::getSingleton().getOverlayElement("DebugOverlay/AverageFps");
+                Ogre::OverlayElement* guiTris =
+                    Ogre::OverlayManager::getSingleton().getOverlayElement("DebugOverlay/NumTris");
+                Ogre::OverlayElement* guiBatches =
+                    Ogre::OverlayManager::getSingleton().getOverlayElement("DebugOverlay/NumBatches");
+                Ogre::OverlayElement* guiDbg =
+                    Ogre::OverlayManager::getSingleton().getOverlayElement("DebugOverlay/DebugText");
 
-            const Ogre::RenderTarget::FrameStats& stats = mRenderWindow->getStatistics();
+                const Ogre::RenderTarget::FrameStats& stats = mRenderWindow->getStatistics();
 
-            guiAvg->setCaption("Average FPS   : " + Ogre::StringConverter::toString(stats.avgFPS));
-            guiTris->setCaption("Triangle Count: " + Ogre::StringConverter::toString(stats.triangleCount));
-            guiBatches->setCaption("Batch Count   : " + Ogre::StringConverter::toString(stats.batchCount));
-            guiDbg->setCaption("");
+                guiAvg->setCaption("Average FPS   : " + Ogre::StringConverter::toString(stats.avgFPS));
+                guiTris->setCaption("Triangle Count: " +
+                                    Ogre::StringConverter::toString(stats.triangleCount));
+                guiBatches->setCaption("Batch Count   : " + Ogre::StringConverter::toString(stats.batchCount));
+                guiDbg->setCaption("");
+            }
+            catch (...)
+            { /* ignore */
+            }
+            mOverlay->show();
         }
-        catch (...)
-        { /* ignore */
+        else
+        {
+            static bool warnedAboutMissingDebugOverlay = false;
+            if (!warnedAboutMissingDebugOverlay)
+            {
+                Ogre::LogManager::getSingleton().logMessage(
+                    "RenderView::update: DebugOverlay is unavailable; debug HUD is disabled.");
+                warnedAboutMissingDebugOverlay = true;
+            }
         }
-        mOverlay->show();
     }
     else
     {

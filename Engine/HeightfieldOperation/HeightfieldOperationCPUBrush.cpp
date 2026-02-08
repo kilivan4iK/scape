@@ -109,7 +109,7 @@ public:
             }
         }
         heightfieldBuffer->updateFrom(pixelBox);
-        delete data;
+        delete[] data;
 
         mUpdatedRect = Utils::unionTRect(mUpdatedRect, editRect);
 
@@ -284,7 +284,7 @@ void HeightfieldOperationCPUBrush::applyPrimary(const Ogre::Vector3& position, O
     }
     heightfieldBuffer->updateFrom(pixelBox);
     heightfieldBuffer->revalidate();
-    delete data;
+    delete[] data;
 }
 
 void HeightfieldOperationCPUBrush::applySecondary(const Ogre::Vector3& position, Ogre::Real strength)
@@ -355,7 +355,7 @@ void HeightfieldOperationCPUBrush::applySecondary(const Ogre::Vector3& position,
     }
     heightfieldBuffer->updateFrom(pixelBox);
     heightfieldBuffer->revalidate();
-    delete data;
+    delete[] data;
 }
 
 void HeightfieldOperationCPUBrush::applySecondary(const Ogre::Vector3& position, Ogre::Real strength)
@@ -418,6 +418,6 @@ void HeightfieldOperationCPUBrush::applySecondary(const Ogre::Vector3& position,
     }
     heightfieldBuffer->updateFrom(pixelBox);
     heightfieldBuffer->revalidate();
-    delete data;
+    delete[] data;
 }
 #endif

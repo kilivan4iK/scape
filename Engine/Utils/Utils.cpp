@@ -109,6 +109,10 @@ Ogre::Real Utils::getTypicalVertexElementRangeMax(Ogre::VertexElementType type)
 bool Utils::bindShaderCustomAutoConstant(Ogre::Technique* technique, size_t constantIndex,
                                          const string& constantName)
 {
+    if (!technique)
+    {
+        return false;
+    }
 
     for (Ogre::ushort i = 0; i < technique->getNumPasses(); ++i)
     {

@@ -189,7 +189,7 @@ void HeightfieldManager::resetHeightfield()
                 }
             }
             page->updateFrom(pixelBox);
-            delete data;
+            delete[] data;
         }
     }
 

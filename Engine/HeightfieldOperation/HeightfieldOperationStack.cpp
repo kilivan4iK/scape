@@ -112,6 +112,8 @@ bool HeightfieldOperationStack::undoOperation()
     return false;
 }
 
+bool HeightfieldOperationStack::undoLastOperation() { return undoOperation(); }
+
 bool HeightfieldOperationStack::redoOperation()
 {
     if (getLastOperation())
@@ -130,6 +132,8 @@ bool HeightfieldOperationStack::redoOperation()
     }
     return false;
 }
+
+bool HeightfieldOperationStack::redoLastOperation() { return redoOperation(); }
 
 void HeightfieldOperationStack::onPreFrameTick()
 {

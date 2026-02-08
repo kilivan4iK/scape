@@ -1,0 +1,246 @@
+{
+	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
+	"BUILD_DIR" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen",
+	"CMAKE_BINARY_DIR" : "E:/Downloads/scape/build-vcpkg",
+	"CMAKE_CURRENT_BINARY_DIR" : "E:/Downloads/scape/build-vcpkg/qtEditor",
+	"CMAKE_CURRENT_SOURCE_DIR" : "E:/Downloads/scape/qtEditor",
+	"CMAKE_EXECUTABLE" : "C:/Program Files/CMake/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"E:/Downloads/scape/qtEditor/CMakeLists.txt",
+		"E:/Downloads/scape/qtEditor/ScapeVersion.h.in",
+		"E:/Downloads/scape/qtEditor/res/editor.qrc"
+	],
+	"CMAKE_SOURCE_DIR" : "E:/Downloads/scape",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"E:/Downloads/scape/qtEditor/AboutDialog.h",
+			"MU",
+			"EWIEGA46WW/moc_AboutDialog.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/BrushSettingsWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_BrushSettingsWidget.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/ButtonDefinitionDetailsDialog.h",
+			"MU",
+			"EWIEGA46WW/moc_ButtonDefinitionDetailsDialog.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/ButtonDefinitionsDialog.h",
+			"MU",
+			"EWIEGA46WW/moc_ButtonDefinitionsDialog.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/ExportImageDialog.h",
+			"MU",
+			"EWIEGA46WW/moc_ExportImageDialog.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/ImageFileDialog.h",
+			"MU",
+			"EWIEGA46WW/moc_ImageFileDialog.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/ImportImageDialog.h",
+			"MU",
+			"EWIEGA46WW/moc_ImportImageDialog.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/MainWindow.h",
+			"MU",
+			"EWIEGA46WW/moc_MainWindow.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/OgreWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_OgreWidget.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/PresetsWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_PresetsWidget.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/PropertiesWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_PropertiesWidget.cpp",
+			null
+		],
+		[
+			"E:/Downloads/scape/qtEditor/StartupSettingsDialog.h",
+			"MU",
+			"EWIEGA46WW/moc_StartupSettingsDialog.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/include",
+	"INCLUDE_DIR_Debug" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/include_Debug",
+	"INCLUDE_DIR_MinSizeRel" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/include_MinSizeRel",
+	"INCLUDE_DIR_RelWithDebInfo" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/include_Release",
+	"MOC_COMPILATION_FILE" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/mocs_compilation.cpp",
+	"MOC_COMPILATION_FILE_Debug" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/mocs_compilation_Debug.cpp",
+	"MOC_COMPILATION_FILE_MinSizeRel" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/mocs_compilation_MinSizeRel.cpp",
+	"MOC_COMPILATION_FILE_RelWithDebInfo" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/mocs_compilation_RelWithDebInfo.cpp",
+	"MOC_COMPILATION_FILE_Release" : "E:/Downloads/scape/build-vcpkg/qtEditor/qtEditor_autogen/mocs_compilation_Release.cpp",
+	"MOC_DEFINITIONS" : [],
+	"MOC_DEFINITIONS_Debug" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB", "WIN32" ],
+	"MOC_DEFINITIONS_MinSizeRel" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB", "WIN32" ],
+	"MOC_DEFINITIONS_RelWithDebInfo" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB", "WIN32" ],
+	"MOC_DEFINITIONS_Release" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB", "WIN32" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : [],
+	"MOC_INCLUDES_Debug" : 
+	[
+		"E:/Downloads/scape/build-vcpkg/qtEditor",
+		"E:/Downloads/scape/qtEditor",
+		"E:/Downloads/scape/Engine",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Bites",
+		"C:/vcpkg/installed/x64-windows/include/OGRE",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Overlay",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Paging",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Property",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Terrain",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Volume",
+		"C:/vcpkg/installed/x64-windows/include/qt5",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtGui",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtCore",
+		"C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets"
+	],
+	"MOC_INCLUDES_MinSizeRel" : 
+	[
+		"E:/Downloads/scape/build-vcpkg/qtEditor",
+		"E:/Downloads/scape/qtEditor",
+		"E:/Downloads/scape/Engine",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Bites",
+		"C:/vcpkg/installed/x64-windows/include/OGRE",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Overlay",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Paging",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Property",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Terrain",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Volume",
+		"C:/vcpkg/installed/x64-windows/include/qt5",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtGui",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtCore",
+		"C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets"
+	],
+	"MOC_INCLUDES_RelWithDebInfo" : 
+	[
+		"E:/Downloads/scape/build-vcpkg/qtEditor",
+		"E:/Downloads/scape/qtEditor",
+		"E:/Downloads/scape/Engine",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Bites",
+		"C:/vcpkg/installed/x64-windows/include/OGRE",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Overlay",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Paging",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Property",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Terrain",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Volume",
+		"C:/vcpkg/installed/x64-windows/include/qt5",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtGui",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtCore",
+		"C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets"
+	],
+	"MOC_INCLUDES_Release" : 
+	[
+		"E:/Downloads/scape/build-vcpkg/qtEditor",
+		"E:/Downloads/scape/qtEditor",
+		"E:/Downloads/scape/Engine",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Bites",
+		"C:/vcpkg/installed/x64-windows/include/OGRE",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Overlay",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/RTShaderSystem",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/MeshLodGenerator",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Paging",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Property",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Terrain",
+		"C:/vcpkg/installed/x64-windows/include/OGRE/Volume",
+		"C:/vcpkg/installed/x64-windows/include/qt5",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtGui",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtCore",
+		"C:/vcpkg/installed/x64-windows/tools/qt5/mkspecs/win32-msvc",
+		"C:/vcpkg/installed/x64-windows/include/qt5/QtWidgets"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : [],
+	"MOC_PREDEFS_FILE" : "",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : true,
+	"PARALLEL" : 6,
+	"PARSE_CACHE_FILE" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_Debug" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/ParseCache_Debug.txt",
+	"PARSE_CACHE_FILE_MinSizeRel" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/ParseCache_MinSizeRel.txt",
+	"PARSE_CACHE_FILE_RelWithDebInfo" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/ParseCache_RelWithDebInfo.txt",
+	"PARSE_CACHE_FILE_Release" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/ParseCache_Release.txt",
+	"QT_MOC_EXECUTABLE" : "C:/vcpkg/installed/x64-windows/tools/qt5/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "C:/vcpkg/installed/x64-windows/tools/qt5/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_Debug" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutogenUsed_Debug.txt",
+	"SETTINGS_FILE_MinSizeRel" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutogenUsed_MinSizeRel.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutogenUsed_Release.txt",
+	"SOURCES" : 
+	[
+		[ "E:/Downloads/scape/qtEditor/AboutDialog.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/BrushSettingsWidget.cpp", "MU", null ],
+		[
+			"E:/Downloads/scape/qtEditor/ButtonDefinitionDetailsDialog.cpp",
+			"MU",
+			null
+		],
+		[ "E:/Downloads/scape/qtEditor/ButtonDefinitionsDialog.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/ExportImageDialog.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/ImageFileDialog.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/ImportImageDialog.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/MainWindow.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/OgreWidget.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/PresetsWidget.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/PropertiesWidget.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/StartupSettingsDialog.cpp", "MU", null ],
+		[ "E:/Downloads/scape/qtEditor/main.cpp", "MU", null ]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

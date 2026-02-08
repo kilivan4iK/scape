@@ -24,7 +24,8 @@ public:
 
     ~SerialMemoryBuffer()
     {
-        SAFE_DELETE(mData);
+        delete[] mData;
+        mData = NULL;
         mSize = 0;
     }
 
@@ -45,7 +46,7 @@ public:
             memcpy(newData, mData, std::min(mSize, bytes));
         }
 
-        delete mData;
+        delete[] mData;
         mData = newData;
         mSize = bytes;
     }

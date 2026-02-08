@@ -269,10 +269,10 @@ void HeightfieldOperationCPUNoise::applyPrimary(const Ogre::Vector3& position, O
             data[z * editRect.width() + x] = Utils::clamp(hy + delta, 0.0f, 1.0f);
         }
     }
-    delete amplitudes;
+    delete[] amplitudes;
     heightfieldBuffer->updateFrom(pixelBox);
     heightfieldBuffer->revalidate();
-    delete data;
+    delete[] data;
 }
 
 /*

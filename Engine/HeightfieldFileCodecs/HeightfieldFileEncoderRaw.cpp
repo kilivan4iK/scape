@@ -111,7 +111,7 @@ bool HeightfieldFileEncoderRawBase::encode(HeightfieldBuffer* inBuffer, FILE* fi
             fwrite(rowData, 1, rowBytePitch, fileHandle);
         }
 
-        delete rawPixelBox.data;
+        delete[] static_cast<Ogre::uint8*>(rawPixelBox.data);
 
         return true;
     }

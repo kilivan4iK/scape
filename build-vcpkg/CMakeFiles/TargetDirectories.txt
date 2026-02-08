@@ -1,0 +1,6 @@
+E:/Downloads/scape/build-vcpkg/CMakeFiles/ALL_BUILD.dir
+E:/Downloads/scape/build-vcpkg/CMakeFiles/ZERO_CHECK.dir
+E:/Downloads/scape/build-vcpkg/Engine/CMakeFiles/Engine.dir
+E:/Downloads/scape/build-vcpkg/Engine/CMakeFiles/ALL_BUILD.dir
+E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor.dir
+E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/ALL_BUILD.dir

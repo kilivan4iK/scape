@@ -1,0 +1,24 @@
+^E:\DOWNLOADS\SCAPE\BUILD-VCPKG\CMAKEFILES\F16F49B9C86B6B11A150420BAAF4DFE0\QRC_EDITOR.CPP.RULE
+setlocal
+cd E:\Downloads\scape\build-vcpkg\qtEditor
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/qtEditor_autogen.dir/AutoRcc_editor_PNK5WDWK6L_Info.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOWNLOADS\SCAPE\QTEDITOR\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Downloads/scape -BE:/Downloads/scape/build-vcpkg --check-stamp-file E:/Downloads/scape/build-vcpkg/qtEditor/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

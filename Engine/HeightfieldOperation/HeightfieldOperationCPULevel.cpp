@@ -155,7 +155,7 @@ void HeightfieldOperationCPULevel::applyPrimary(const Ogre::Vector3& position, O
     }
     heightfieldBuffer->updateFrom(pixelBox);
     heightfieldBuffer->revalidate();
-    delete data;
+    delete[] data;
 }
 
 void HeightfieldOperationCPULevel::applySecondary(const Ogre::Vector3& position, Ogre::Real strength)
@@ -223,5 +223,5 @@ void HeightfieldOperationCPULevel::applySecondary(const Ogre::Vector3& position,
     }
     heightfieldBuffer->updateFrom(pixelBox);
     heightfieldBuffer->revalidate();
-    delete data;
+    delete[] data;
 }

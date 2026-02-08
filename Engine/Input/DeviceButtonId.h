@@ -23,6 +23,13 @@ namespace ScapeEngine
 namespace DeviceButtonId
 {
 // EDeviceButton enum.
+#ifdef Q_MOC_RUN
+enum EDeviceButtonId
+{
+    DEVICEBUTTONID_UNKNOWN,
+    DEVICEBUTTONID_ENUM_LENGTH
+};
+#else
 #define ENUMID(a) a,
 enum EDeviceButtonId
 {
@@ -32,6 +39,7 @@ enum EDeviceButtonId
     DEVICEBUTTONID_ENUM_LENGTH
 };
 #undef ENUMID
+#endif
 
 namespace DeviceId
 {

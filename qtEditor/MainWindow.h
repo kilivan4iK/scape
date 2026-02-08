@@ -56,6 +56,8 @@ public Q_SLOTS:
     void startupSettings();
     void buttonDefinitions();
     void resetHeightfield();
+    void undoOperation();
+    void redoOperation();
     void exitApp();
 
     void propertyValueChanged(const std::string& key, const std::string& value);
@@ -107,6 +109,8 @@ private:
     QAction* actExportImage;
 
     QAction* actResetHeightfield;
+    QAction* actUndo;
+    QAction* actRedo;
 
     QAction* actStartupSettings;
 

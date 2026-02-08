@@ -123,6 +123,10 @@ public:
 
     void resetHeightfield();
 
+    bool undoLastOperation();
+
+    bool redoLastOperation();
+
     HeightfieldBrushSettings& getHeightfieldBrushSettings();
 
     StartupSettingsDataAccessObject& getStartupSettingsDataAccessObject() const;

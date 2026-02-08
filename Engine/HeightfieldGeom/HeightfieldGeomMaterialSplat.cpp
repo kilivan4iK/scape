@@ -759,11 +759,37 @@ void HeightfieldGeomMaterialSplat::updateShaderConstantsGeomTile(
 
 void HeightfieldGeomMaterialSplat::updateTextures()
 {
-    Ogre::Technique* technique = getMaterial()->getBestTechnique();
-    assert(technique);
+    Ogre::MaterialPtr material = getMaterial();
+    if (!material)
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "HeightfieldGeomMaterialSplat::updateTextures: material not created.");
+        return;
+    }
+
+    Ogre::Technique* technique = material->getBestTechnique();
+    if (!technique)
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "HeightfieldGeomMaterialSplat::updateTextures: no supported technique for material '" +
+            material->getName() + "'.");
+        return;
+    }
+
+    if (technique->getNumPasses() == 0)
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "HeightfieldGeomMaterialSplat::updateTextures: material has no passes.");
+        return;
+    }
 
     Ogre::Pass* pass = technique->getPass(0);
-    assert(pass);
+    if (!pass || pass->getNumTextureUnitStates() < 5)
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "HeightfieldGeomMaterialSplat::updateTextures: material pass is missing expected texture units.");
+        return;
+    }
 
     string group = Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME;
 
@@ -793,10 +819,24 @@ void HeightfieldGeomMaterialSplat::updateTextures()
 
 void HeightfieldGeomMaterialSplat::bindShaderConstants()
 {
-    Ogre::Technique* technique = getMaterial()->getBestTechnique();
-    assert(technique);
-
     HeightfieldGeomMaterial::bindShaderConstants();
+
+    Ogre::MaterialPtr material = getMaterial();
+    if (!material)
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "HeightfieldGeomMaterialSplat::bindShaderConstants: material not created.");
+        return;
+    }
+
+    Ogre::Technique* technique = material->getBestTechnique();
+    if (!technique)
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "HeightfieldGeomMaterialSplat::bindShaderConstants: no supported technique for material '" +
+            material->getName() + "'.");
+        return;
+    }
 
     Utils::bindShaderCustomAutoConstant(technique, _HeightfieldGeomMaterialSplatNS::ISOSCALES,
                                         _T("isoScales"));

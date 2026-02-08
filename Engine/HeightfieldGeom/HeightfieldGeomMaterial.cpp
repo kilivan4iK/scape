@@ -212,10 +212,21 @@ void HeightfieldGeomMaterial::updateShaderConstantsGeomTile(
 void HeightfieldGeomMaterial::bindShaderConstants()
 {
     Ogre::MaterialPtr material = getMaterial();
-    assert(material);
+    if (!material)
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "HeightfieldGeomMaterial::bindShaderConstants: material not created.");
+        return;
+    }
 
     Ogre::Technique* technique = material->getBestTechnique();
-    assert(technique);
+    if (!technique)
+    {
+        Ogre::LogManager::getSingleton().logMessage(
+            "HeightfieldGeomMaterial::bindShaderConstants: no supported technique for material '" +
+            material->getName() + "'.");
+        return;
+    }
 
     Utils::bindShaderCustomAutoConstant(technique, _HeightfieldGeomMaterialNS::UNITQUADBIAS,
                                         _T("unitQuadBias"));

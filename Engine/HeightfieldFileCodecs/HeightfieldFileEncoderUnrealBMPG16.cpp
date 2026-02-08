@@ -120,6 +120,8 @@ bool HeightfieldFileEncoderUnrealBMPG16::encode(HeightfieldBuffer* inBuffer, con
         bool successful = HeightfieldFileEncoderRawBase::encode(inBuffer, file, mFlipX, mFlipY, mBigEndian,
                                                                 mPixelFormat, error);
 
+        delete[] static_cast<Ogre::uint8*>(rawPixelBox.data);
+
         fclose(file);
 
         return successful;

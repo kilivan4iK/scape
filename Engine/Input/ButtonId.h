@@ -16,6 +16,13 @@ namespace ScapeEngine
 namespace ButtonId
 {
 // EButtonId enum.
+#ifdef Q_MOC_RUN
+enum EButtonId
+{
+    BUTTONID_UNKNOWN,
+    BUTTONID_ENUM_LENGTH
+};
+#else
 #define ENUMID(a) a,
 enum EButtonId
 {
@@ -24,6 +31,7 @@ enum EButtonId
     BUTTONID_ENUM_LENGTH
 };
 #undef ENUMID
+#endif
 
 std::map<EButtonId, std::string> _ScapeEngineExport getButtonIdMap();
 

@@ -105,7 +105,7 @@ bool HeightfieldFileEncoderImageBase::encode(HeightfieldBuffer* inBuffer, const 
     {
     }
 
-    delete rawPixelBox.data;
+    delete[] static_cast<Ogre::uint8*>(rawPixelBox.data);
 
     if (!saved)
     {

@@ -36,6 +36,10 @@ public:
 
     void clearAll();
 
+    bool undoLastOperation();
+
+    bool redoLastOperation();
+
 protected:
     typedef std::deque<HeightfieldOperation*> Operations;
     Operations mOperationHistory;
