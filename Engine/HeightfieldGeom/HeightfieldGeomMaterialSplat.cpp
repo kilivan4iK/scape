@@ -26,8 +26,13 @@ enum EPropertyId
     PROPERTYID_ISOXZ,
     PROPERTYID_ISOY,
     PROPERTYID_ISOFADE,
+    PROPERTYID_SATELLITEBLEND,
+    PROPERTYID_SATELLITEUVSCALE,
+    PROPERTYID_SATELLITEUVOFFSETU,
+    PROPERTYID_SATELLITEUVOFFSETV,
 
     PROPERTYID_NOISETEXTURE,
+    PROPERTYID_SATELLITETEXTURE,
     PROPERTYID_SLOPEDISTORTLO,
     PROPERTYID_SLOPEDISTORTMID,
     PROPERTYID_SLOPEDISTORTHI,
@@ -98,9 +103,14 @@ bool HeightfieldGeomMaterialSplat::initPersistentElementStringEnumMap(StringEnum
     ADD_STRINGENUM(map, PROPERTYID_, MULTIPROJECT);
     ADD_STRINGENUM(map, PROPERTYID_, UVSCALEGLOBAL);
     ADD_STRINGENUM(map, PROPERTYID_, UVSCALELOCAL);
+    ADD_STRINGENUM(map, PROPERTYID_, SATELLITEBLEND);
+    ADD_STRINGENUM(map, PROPERTYID_, SATELLITEUVSCALE);
+    ADD_STRINGENUM(map, PROPERTYID_, SATELLITEUVOFFSETU);
+    ADD_STRINGENUM(map, PROPERTYID_, SATELLITEUVOFFSETV);
 
     // noise properties
     ADD_STRINGENUM(map, PROPERTYID_, NOISETEXTURE);
+    ADD_STRINGENUM(map, PROPERTYID_, SATELLITETEXTURE);
     ADD_STRINGENUM(map, PROPERTYID_, SLOPEDISTORTLO);
     ADD_STRINGENUM(map, PROPERTYID_, SLOPEDISTORTMID);
     ADD_STRINGENUM(map, PROPERTYID_, SLOPEDISTORTHI);
@@ -207,12 +217,58 @@ string HeightfieldGeomMaterialSplat::setUIElementPropertyValue(const string& ele
         outValue = Ogre::StringConverter::toString(realValue);
         break;
     }
+    case PROPERTYID_SATELLITEBLEND:
+    {
+        realValue = Utils::clamp(realValue, 0.0f, 1.0f);
+        mSatelliteBlend = realValue;
+        outValue = Ogre::StringConverter::toString(realValue);
+        break;
+    }
+    case PROPERTYID_SATELLITEUVSCALE:
+    {
+        if (value.empty())
+        {
+            realValue = 1.0f;
+        }
+        realValue = Utils::clamp(realValue, 0.001f, 1000.0f);
+        mSatelliteUVScale = realValue;
+        outValue = Ogre::StringConverter::toString(realValue);
+        break;
+    }
+    case PROPERTYID_SATELLITEUVOFFSETU:
+    {
+        realValue = Utils::clamp(realValue, -100.0f, 100.0f);
+        mSatelliteUVOffsetU = realValue;
+        outValue = Ogre::StringConverter::toString(realValue);
+        break;
+    }
+    case PROPERTYID_SATELLITEUVOFFSETV:
+    {
+        realValue = Utils::clamp(realValue, -100.0f, 100.0f);
+        mSatelliteUVOffsetV = realValue;
+        outValue = Ogre::StringConverter::toString(realValue);
+        break;
+    }
 
     case PROPERTYID_NOISETEXTURE:
     {
         outValue = Utils::getRelativePath(value, Utils::getWorkingPath());
         forceReloadTexture(mNoiseTextureFileName, outValue);
         mNoiseTextureFileName = outValue;
+        break;
+    }
+    case PROPERTYID_SATELLITETEXTURE:
+    {
+        if (value.empty())
+        {
+            outValue = _T("./Materials/Textures/Terrain/black.png");
+        }
+        else
+        {
+            outValue = Utils::getRelativePath(value, Utils::getWorkingPath());
+        }
+        forceReloadTexture(mSatelliteTextureFileName, outValue);
+        mSatelliteTextureFileName = outValue;
         break;
     }
     case PROPERTYID_SLOPEDISTORTLO:
@@ -595,6 +651,26 @@ void HeightfieldGeomMaterialSplat::updateShaderConstantsGeom(
         }
 
         {
+            const HeightfieldBufferSet* bufferSet =
+                heightfieldGeom->getHeightfieldBuffer()->getHeightfieldBufferSet();
+            assert(bufferSet);
+
+            const Ogre::Real invColumns =
+                1.0f / std::max(1.0f, (Ogre::Real)(bufferSet->getElementColumnCount() - 1));
+            const Ogre::Real invRows =
+                1.0f / std::max(1.0f, (Ogre::Real)(bufferSet->getElementRowCount() - 1));
+
+            shaderCustomAutoConstants->setConstant(
+                _HeightfieldGeomMaterialSplatNS::SATELLITEUVSCALEBIAS,
+                Ogre::Vector4(mSatelliteUVScale * invColumns, mSatelliteUVScale * invRows,
+                              mSatelliteUVOffsetU, mSatelliteUVOffsetV));
+
+            shaderCustomAutoConstants->setConstant(
+                _HeightfieldGeomMaterialSplatNS::SATELLITEBLEND,
+                Ogre::Vector4(mSatelliteBlend, 0.0f, 0.0f, 0.0f));
+        }
+
+        {
             Ogre::Real layer2Lo = mLayerProperties[2].height -
                                   (mLayerProperties[2].heightUp ? 0.5f : -0.5f) *
                                       std::max(0.001f, mLayerProperties[2].heightVar);
@@ -784,7 +860,7 @@ void HeightfieldGeomMaterialSplat::updateTextures()
     }
 
     Ogre::Pass* pass = technique->getPass(0);
-    if (!pass || pass->getNumTextureUnitStates() < 5)
+    if (!pass || pass->getNumTextureUnitStates() < 6)
     {
         Ogre::LogManager::getSingleton().logMessage(
             "HeightfieldGeomMaterialSplat::updateTextures: material pass is missing expected texture units.");
@@ -803,6 +879,8 @@ void HeightfieldGeomMaterialSplat::updateTextures()
                                       mLayerProperties[3].textureFileName);
     Utils::getTextureFromExternalFile(TEXTUREBASENAME + mLayerProperties[4].textureFileName, group,
                                       mLayerProperties[4].textureFileName);
+    Utils::getTextureFromExternalFile(TEXTUREBASENAME + mSatelliteTextureFileName, group,
+                                      mSatelliteTextureFileName);
 
     // Ogre::TextureManager::getSingleton().unload(mNoiseTextureName);
     // Ogre::TextureManager::getSingleton().unload(mLayerProperties[1].textureName);
@@ -815,6 +893,7 @@ void HeightfieldGeomMaterialSplat::updateTextures()
     pass->getTextureUnitState(2)->setTextureName(TEXTUREBASENAME + mLayerProperties[2].textureFileName);
     pass->getTextureUnitState(3)->setTextureName(TEXTUREBASENAME + mLayerProperties[3].textureFileName);
     pass->getTextureUnitState(4)->setTextureName(TEXTUREBASENAME + mLayerProperties[4].textureFileName);
+    pass->getTextureUnitState(5)->setTextureName(TEXTUREBASENAME + mSatelliteTextureFileName);
 }
 
 void HeightfieldGeomMaterialSplat::bindShaderConstants()
@@ -846,6 +925,10 @@ void HeightfieldGeomMaterialSplat::bindShaderConstants()
                                         _T("uvScaleGlobal"));
     Utils::bindShaderCustomAutoConstant(technique, _HeightfieldGeomMaterialSplatNS::UVSCALELOCAL,
                                         _T("uvScaleLocal"));
+    Utils::bindShaderCustomAutoConstant(technique, _HeightfieldGeomMaterialSplatNS::SATELLITEUVSCALEBIAS,
+                                        _T("satelliteUVScaleBias"));
+    Utils::bindShaderCustomAutoConstant(technique, _HeightfieldGeomMaterialSplatNS::SATELLITEBLEND,
+                                        _T("satelliteBlend"));
     Utils::bindShaderCustomAutoConstant(technique, _HeightfieldGeomMaterialSplatNS::LAYERHEIGHTSCALE,
                                         _T("layerHeightScale"));
     Utils::bindShaderCustomAutoConstant(technique, _HeightfieldGeomMaterialSplatNS::LAYERHEIGHTBIAS,

@@ -577,6 +577,36 @@
                 "TYPE": "FILE",
                 "LONG": "Filename of layer 4's detail texture"
             },
+            "SATELLITETEXTURE": {
+                "CATEGORY": "Satellite",
+                "SHORT": "Satellite texture",
+                "TYPE": "FILE",
+                "LONG": "Filename of the satellite overlay image"
+            },
+            "SATELLITEBLEND": {
+                "CATEGORY": "Satellite",
+                "SHORT": "Overlay opacity",
+                "TYPE": "REAL",
+                "LONG": "Blend amount of the satellite overlay (0 = off, 1 = full)"
+            },
+            "SATELLITEUVSCALE": {
+                "CATEGORY": "Satellite",
+                "SHORT": "UV scale",
+                "TYPE": "REAL",
+                "LONG": "Scale of the satellite UV mapping across the terrain extent"
+            },
+            "SATELLITEUVOFFSETU": {
+                "CATEGORY": "Satellite",
+                "SHORT": "UV offset U",
+                "TYPE": "REAL",
+                "LONG": "Horizontal UV offset for the satellite overlay"
+            },
+            "SATELLITEUVOFFSETV": {
+                "CATEGORY": "Satellite",
+                "SHORT": "UV offset V",
+                "TYPE": "REAL",
+                "LONG": "Vertical UV offset for the satellite overlay"
+            },
             "INTENSITYDISTORTMID": {
                 "CATEGORY": "Noise",
                 "SHORT": "Medium light distortion scale",

@@ -11,6 +11,8 @@ uniform vec4 layerSlopeScale;
 uniform vec4 layerSlopeBias;
 uniform mat4 layerHeightDistort;
 uniform vec4 intensityScaleGlobal;
+uniform vec4 satelliteUVScaleBias;
+uniform vec4 satelliteBlend;
 uniform vec4 fogColor;
 uniform vec4 sunColor;
 uniform vec4 skyColor;
@@ -21,6 +23,7 @@ uniform sampler2D samplerLevel0;
 uniform sampler2D samplerLevel1;
 uniform sampler2D samplerLevel2;
 uniform sampler2D samplerLevel3;
+uniform sampler2D samplerSatellite;
 
 varying vec4 oUnitQuadPos;
 varying vec3 oNormalDotYDist;
@@ -46,6 +49,11 @@ void main()
 
     vec4 diffuseColor = mix(skyColor, sunColor, oNormalDotYDist.z);
     color = diffuseColor.rgb * dot(globalColor, intensityScaleGlobal) * color;
+
+    vec2 satelliteUV = oUnitQuadPos.xz * satelliteUVScaleBias.xy + satelliteUVScaleBias.zw;
+    vec3 satelliteColor = texture2D(samplerSatellite, satelliteUV).rgb;
+    vec3 litSatelliteColor = diffuseColor.rgb * dot(globalColor, intensityScaleGlobal) * satelliteColor;
+    color = mix(color, litSatelliteColor, clamp(satelliteBlend.x, 0.0, 1.0));
 
     float fogDen = max(fogColor.w * oNormalDotYDist.y * oNormalDotYDist.y, 1e-6);
     float fogLerp = clamp(exp(-1.0 / fogDen), 0.0, 1.0);

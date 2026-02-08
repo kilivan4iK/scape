@@ -390,6 +390,11 @@
                 "LODPOWER": "100",
                 "LAYER2SLOPEUP": "true",
                 "LAYER4TEXTURE": "./Materials/Textures/Terrain/snow.png",
+                "SATELLITETEXTURE": "./Materials/Textures/Terrain/black.png",
+                "SATELLITEBLEND": "0",
+                "SATELLITEUVSCALE": "1",
+                "SATELLITEUVOFFSETU": "0",
+                "SATELLITEUVOFFSETV": "0",
                 "INTENSITYDISTORTMID": "12.001"
             },
             "Grey": {
@@ -439,6 +444,11 @@
                 "LODPOWER": "50",
                 "LAYER2SLOPEUP": "false",
                 "LAYER4TEXTURE": "",
+                "SATELLITETEXTURE": "./Materials/Textures/Terrain/black.png",
+                "SATELLITEBLEND": "0",
+                "SATELLITEUVSCALE": "1",
+                "SATELLITEUVOFFSETU": "0",
+                "SATELLITEUVOFFSETV": "0",
                 "INTENSITYDISTORTMID": "0.001"
             }
         },

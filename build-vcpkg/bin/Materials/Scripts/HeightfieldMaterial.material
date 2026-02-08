@@ -66,6 +66,7 @@ material HeightfieldMaterial_Splat4
         param_named samplerLevel1 int 2
         param_named samplerLevel2 int 3
         param_named samplerLevel3 int 4
+        param_named samplerSatellite int 5
       }
 
       texture_unit
@@ -91,6 +92,11 @@ material HeightfieldMaterial_Splat4
       texture_unit
       {
           tex_address_mode mirror
+      }
+
+      texture_unit
+      {
+          tex_address_mode clamp
       }
     }
   }
@@ -117,6 +123,7 @@ material HeightfieldMaterial_Splat4_MultiProject
         param_named samplerLevel1 int 2
         param_named samplerLevel2 int 3
         param_named samplerLevel3 int 4
+        param_named samplerSatellite int 5
       }
 
       texture_unit
@@ -142,6 +149,11 @@ material HeightfieldMaterial_Splat4_MultiProject
       texture_unit
       {
           tex_address_mode mirror
+      }
+
+      texture_unit
+      {
+          tex_address_mode clamp
       }
     }
   }

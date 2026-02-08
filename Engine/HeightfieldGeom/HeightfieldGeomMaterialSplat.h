@@ -37,6 +37,8 @@ enum EShaderConstant
     LAYERSLOPESCALE,
     LAYERSLOPEBIAS,
     INTENSITYSCALEGLOBAL,
+    SATELLITEUVSCALEBIAS,
+    SATELLITEBLEND,
     FOGCOLOR,
     LODERROR,
     SHADERCONSTANT_COUNT
@@ -82,6 +84,11 @@ protected:
     };
     LayerProperties mLayerProperties[5];
     string mNoiseTextureFileName;
+    string mSatelliteTextureFileName;
+    Ogre::Real mSatelliteBlend;
+    Ogre::Real mSatelliteUVScale;
+    Ogre::Real mSatelliteUVOffsetU;
+    Ogre::Real mSatelliteUVOffsetV;
     bool mIsoXZ, mIsoY;
     Ogre::Real mIsoFade;
     bool mMultiProject;

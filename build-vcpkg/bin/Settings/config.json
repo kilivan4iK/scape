@@ -1,169 +1,14 @@
 {
-    "Startup": {
-        "Heightfield": {
-            "rows": 4096,
-            "columns": 4096,
-            "height": 500
-        }
-    },
     "ButtonDefinitions": {
-        "CAMERA_POINTERCAMPANTILT": {
-            "priority": "1",
-            "definitions": [
-                [
-                    "MB_RIGHT"
-                ]
-            ]
-        },
-        "CAMERA_KEYUP": {
-            "priority": "0",
-            "definitions": [
-                [
-                    "KC_Q"
-                ]
-            ]
-        },
-        "BRUSH_SHRINK": {
-            "priority": "5",
-            "definitions": [
-                [
-                    "KC_LBRACKET"
-                ]
-            ]
-        },
-        "CAMERA_POINTERGRABPANTILT": {
-            "priority": "3",
-            "definitions": [
-                [
-                    "KC_LMENU",
-                    "MB_RIGHT"
-                ],
-                [
-                    "KC_RMENU",
-                    "MB_RIGHT"
-                ]
-            ]
-        },
-        "UNDO": {
-            "priority": "10",
-            "definitions": [
-                [
-                    "KC_LCONTROL",
-                    "KC_Z"
-                ],
-                [
-                    "KC_RCONTROL",
-                    "KC_Z"
-                ],
-                [
-                    "KC_LCONTROL",
-                    "KC_LMENU",
-                    "KC_Z"
-                ],
-                [
-                    "KC_RCONTROL",
-                    "KC_LMENU",
-                    "KC_Z"
-                ],
-                [
-                    "KC_LCONTROL",
-                    "KC_RMENU",
-                    "KC_Z"
-                ],
-                [
-                    "KC_RCONTROL",
-                    "KC_RMENU",
-                    "KC_Z"
-                ]
-            ]
-        },
         "BRUSH_ACTIVE": {
-            "priority": "5",
             "definitions": [
                 [
                     "MB_LEFT"
                 ]
-            ]
-        },
-        "CAMERA_KEYBACKWARD": {
-            "priority": "0",
-            "definitions": [
-                [
-                    "KC_S"
-                ]
-            ]
-        },
-        "CAMERA_POINTERGRABTRUCK": {
-            "priority": "3",
-            "definitions": [
-                [
-                    "KC_LCONTROL",
-                    "MB_RIGHT"
-                ],
-                [
-                    "KC_RCONTROL",
-                    "MB_RIGHT"
-                ]
-            ]
-        },
-        "CAMERA_KEYRIGHT": {
-            "priority": "0",
-            "definitions": [
-                [
-                    "KC_D"
-                ]
-            ]
-        },
-        "BRUSH_CHANGERADIUS": {
-            "priority": "6",
-            "definitions": [
-                [
-                    "KC_R"
-                ]
-            ]
-        },
-        "CAMERA_KEYDOWN": {
-            "priority": "0",
-            "definitions": [
-                [
-                    "KC_C"
-                ]
-            ]
-        },
-        "OPERATION_CANCEL": {
-            "priority": "10",
-            "definitions": [
-                [
-                    "KC_ESCAPE"
-                ]
-            ]
-        },
-        "LIGHT_CHANGEDIRECTION": {
-            "priority": "6",
-            "definitions": [
-                [
-                    "KC_L"
-                ]
-            ]
-        },
-        "BRUSH_GROW": {
-            "priority": "5",
-            "definitions": [
-                [
-                    "KC_RBRACKET"
-                ]
-            ]
-        },
-        "CAMERA_KEYLEFT": {
-            "priority": "0",
-            "definitions": [
-                [
-                    "KC_A"
-                ]
-            ]
+            ],
+            "priority": "5"
         },
         "BRUSH_ACTIVE_ALT": {
-            "priority": "6",
             "definitions": [
                 [
                     "KC_LCONTROL",
@@ -173,116 +18,270 @@
                     "KC_RCONTROL",
                     "MB_LEFT"
                 ]
-            ]
-        },
-        "BRUSH_HARDENEDGE": {
-            "priority": "6",
-            "definitions": [
-                [
-                    "KC_LCONTROL",
-                    "KC_LBRACKET"
-                ],
-                [
-                    "KC_RCONTROL",
-                    "KC_LBRACKET"
-                ]
-            ]
-        },
-        "BRUSH_SOFTENEDGE": {
-            "priority": "6",
-            "definitions": [
-                [
-                    "KC_LCONTROL",
-                    "KC_RBRACKET"
-                ],
-                [
-                    "KC_RCONTROL",
-                    "KC_RBRACKET"
-                ]
-            ]
-        },
-        "REDO": {
-            "priority": "12",
-            "definitions": [
-                [
-                    "KC_LCONTROL",
-                    "KC_LSHIFT",
-                    "KC_Z"
-                ],
-                [
-                    "KC_RCONTROL",
-                    "KC_LSHIFT",
-                    "KC_Z"
-                ],
-                [
-                    "KC_LCONTROL",
-                    "KC_RSHIFT",
-                    "KC_Z"
-                ],
-                [
-                    "KC_RCONTROL",
-                    "KC_RSHIFT",
-                    "KC_Z"
-                ]
-            ]
-        },
-        "CAMERA_POINTERGRABDOLLY": {
-            "priority": "4",
-            "definitions": [
-                [
-                    "KC_LMENU",
-                    "KC_LCONTROL",
-                    "MB_RIGHT"
-                ],
-                [
-                    "KC_LMENU",
-                    "KC_RCONTROL",
-                    "MB_RIGHT"
-                ],
-                [
-                    "KC_RMENU",
-                    "KC_LCONTROL",
-                    "MB_RIGHT"
-                ],
-                [
-                    "KC_RMENU",
-                    "KC_RCONTROL",
-                    "MB_RIGHT"
-                ]
-            ]
+            ],
+            "priority": "6"
         },
         "BRUSH_CHANGEFALLOFF": {
-            "priority": "6",
             "definitions": [
                 [
                     "KC_F"
                 ]
-            ]
+            ],
+            "priority": "6"
         },
-        "CAMERA_KEYFORWARD": {
-            "priority": "0",
+        "BRUSH_CHANGERADIUS": {
             "definitions": [
                 [
-                    "KC_W"
+                    "KC_R"
                 ]
-            ]
-        },
-        "MATERIAL_RESET": {
-            "priority": "10",
-            "definitions": [
-                [
-                    "KC_F5"
-                ]
-            ]
+            ],
+            "priority": "6"
         },
         "BRUSH_CHANGERAMPPOWER": {
-            "priority": "6",
             "definitions": [
                 [
                     "KC_P"
                 ]
-            ]
+            ],
+            "priority": "6"
+        },
+        "BRUSH_GROW": {
+            "definitions": [
+                [
+                    "KC_RBRACKET"
+                ]
+            ],
+            "priority": "5"
+        },
+        "BRUSH_HARDENEDGE": {
+            "definitions": [
+                [
+                    "KC_LCONTROL",
+                    "KC_LBRACKET"
+                ],
+                [
+                    "KC_RCONTROL",
+                    "KC_LBRACKET"
+                ]
+            ],
+            "priority": "6"
+        },
+        "BRUSH_SHRINK": {
+            "definitions": [
+                [
+                    "KC_LBRACKET"
+                ]
+            ],
+            "priority": "5"
+        },
+        "BRUSH_SOFTENEDGE": {
+            "definitions": [
+                [
+                    "KC_LCONTROL",
+                    "KC_RBRACKET"
+                ],
+                [
+                    "KC_RCONTROL",
+                    "KC_RBRACKET"
+                ]
+            ],
+            "priority": "6"
+        },
+        "CAMERA_KEYBACKWARD": {
+            "definitions": [
+                [
+                    "KC_S"
+                ]
+            ],
+            "priority": "0"
+        },
+        "CAMERA_KEYDOWN": {
+            "definitions": [
+                [
+                    "KC_C"
+                ]
+            ],
+            "priority": "0"
+        },
+        "CAMERA_KEYFORWARD": {
+            "definitions": [
+                [
+                    "KC_W"
+                ]
+            ],
+            "priority": "0"
+        },
+        "CAMERA_KEYLEFT": {
+            "definitions": [
+                [
+                    "KC_A"
+                ]
+            ],
+            "priority": "0"
+        },
+        "CAMERA_KEYRIGHT": {
+            "definitions": [
+                [
+                    "KC_D"
+                ]
+            ],
+            "priority": "0"
+        },
+        "CAMERA_KEYUP": {
+            "definitions": [
+                [
+                    "KC_Q"
+                ]
+            ],
+            "priority": "0"
+        },
+        "CAMERA_POINTERCAMPANTILT": {
+            "definitions": [
+                [
+                    "MB_RIGHT"
+                ]
+            ],
+            "priority": "1"
+        },
+        "CAMERA_POINTERGRABDOLLY": {
+            "definitions": [
+                [
+                    "KC_LMENU",
+                    "KC_LCONTROL",
+                    "MB_RIGHT"
+                ],
+                [
+                    "KC_LMENU",
+                    "KC_RCONTROL",
+                    "MB_RIGHT"
+                ],
+                [
+                    "KC_RMENU",
+                    "KC_LCONTROL",
+                    "MB_RIGHT"
+                ],
+                [
+                    "KC_RMENU",
+                    "KC_RCONTROL",
+                    "MB_RIGHT"
+                ]
+            ],
+            "priority": "4"
+        },
+        "CAMERA_POINTERGRABPANTILT": {
+            "definitions": [
+                [
+                    "KC_LMENU",
+                    "MB_RIGHT"
+                ],
+                [
+                    "KC_RMENU",
+                    "MB_RIGHT"
+                ]
+            ],
+            "priority": "3"
+        },
+        "CAMERA_POINTERGRABTRUCK": {
+            "definitions": [
+                [
+                    "KC_LCONTROL",
+                    "MB_RIGHT"
+                ],
+                [
+                    "KC_RCONTROL",
+                    "MB_RIGHT"
+                ]
+            ],
+            "priority": "3"
+        },
+        "LIGHT_CHANGEDIRECTION": {
+            "definitions": [
+                [
+                    "KC_L"
+                ]
+            ],
+            "priority": "6"
+        },
+        "MATERIAL_RESET": {
+            "definitions": [
+                [
+                    "KC_F5"
+                ]
+            ],
+            "priority": "10"
+        },
+        "OPERATION_CANCEL": {
+            "definitions": [
+                [
+                    "KC_ESCAPE"
+                ]
+            ],
+            "priority": "10"
+        },
+        "REDO": {
+            "definitions": [
+                [
+                    "KC_LCONTROL",
+                    "KC_LSHIFT",
+                    "KC_Z"
+                ],
+                [
+                    "KC_RCONTROL",
+                    "KC_LSHIFT",
+                    "KC_Z"
+                ],
+                [
+                    "KC_LCONTROL",
+                    "KC_RSHIFT",
+                    "KC_Z"
+                ],
+                [
+                    "KC_RCONTROL",
+                    "KC_RSHIFT",
+                    "KC_Z"
+                ]
+            ],
+            "priority": "12"
+        },
+        "UNDO": {
+            "definitions": [
+                [
+                    "KC_LCONTROL",
+                    "KC_Z"
+                ],
+                [
+                    "KC_RCONTROL",
+                    "KC_Z"
+                ],
+                [
+                    "KC_LCONTROL",
+                    "KC_LMENU",
+                    "KC_Z"
+                ],
+                [
+                    "KC_RCONTROL",
+                    "KC_LMENU",
+                    "KC_Z"
+                ],
+                [
+                    "KC_LCONTROL",
+                    "KC_RMENU",
+                    "KC_Z"
+                ],
+                [
+                    "KC_RCONTROL",
+                    "KC_RMENU",
+                    "KC_Z"
+                ]
+            ],
+            "priority": "10"
+        }
+    },
+    "Startup": {
+        "Heightfield": {
+            "columns": 8096,
+            "height": 1000,
+            "rows": 8096
         }
     }
 }
-
